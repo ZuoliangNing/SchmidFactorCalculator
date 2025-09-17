@@ -1,0 +1,9 @@
+function IPFscatListBoxCallback(ListBox,~,app)
+ListNum = ListBox.Value;
+temp = app.IPFscatFig.UserData.VecData(ListNum,:);
+temp2 = app.IPFscatFig.UserData.VecSampleData(ListNum,:);
+prec = 3;
+app.IPFscatUic.Text(1).String = ...
+    {ListBox.String{ListNum}, ...
+    [num2str(temp(1),prec),' ',num2str(temp(2),prec),' ',num2str(temp(3),prec)], ...
+    [num2str(temp2(1),prec),' ',num2str(temp2(2),prec),' ',num2str(temp2(3),prec)]};
