@@ -1,0 +1,3 @@
+function ObtainCalculateList(app)
+app.CalLis = ...
+    find(flip(strcmp('on',{app.DeformationsystemsselectionMenu.Children.Checked})));
